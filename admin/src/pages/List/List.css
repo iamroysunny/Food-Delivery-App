@@ -1,0 +1,130 @@
+/* =========================
+   PRODUCT LIST PAGE
+   ========================= */
+
+.product-title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #e5e7eb;
+}
+
+/* =========================
+   CONTAINER
+   ========================= */
+
+.product-list-container {
+  width: 100%;
+  padding: 10px;
+}
+
+/* =========================
+   TABLE HEADER (WHITE CARD)
+   ========================= */
+
+.product-table-title {
+  display: grid;
+  grid-template-columns: 100px 1.6fr 1.2fr 1fr 80px;
+  align-items: center;
+  padding: 18px 16px;
+  background: #ffffff;
+  border-radius: 14px;
+  margin-bottom: 14px;
+  font-size: 15px;
+  color: #111827;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================
+   PRODUCT ROW (DARK CARD)
+   ========================= */
+
+.product-row {
+  display: grid;
+  grid-template-columns: 100px 1.6fr 1.2fr 1fr 80px;
+  align-items: center;
+  padding: 16px;
+  margin-bottom: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  border-radius: 14px;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.product-row:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+/* =========================
+   IMAGE
+   ========================= */
+
+.product-image {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* =========================
+   TEXT
+   ========================= */
+
+.product-row p {
+  font-size: 15px;
+  color: #e5e7eb;
+}
+
+/* Price highlight */
+.product-row p:nth-child(4) {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* =========================
+   ACTION
+   ========================= */
+
+.action-title {
+  text-align: center;
+}
+
+.product-action {
+  font-size: 26px;
+  color: #f87171;
+  cursor: pointer;
+  justify-self: center;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.product-action:hover {
+  color: #ef4444;
+  transform: scale(1.2);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+  .product-table-title {
+    display: none;
+  }
+
+  .product-row {
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: repeat(4, auto);
+    row-gap: 6px;
+  }
+
+  .product-image {
+    grid-row: span 4;
+  }
+
+  .product-action {
+    justify-self: flex-start;
+    margin-top: 6px;
+  }
+}

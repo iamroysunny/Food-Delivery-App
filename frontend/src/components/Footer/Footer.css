@@ -1,0 +1,144 @@
+/* ===== Footer Wrapper ===== */
+.footer {
+  width: 100%;
+  background-color: #ffffff;
+  color: #333;
+  padding: 60px 8% 30px;
+  box-sizing: border-box;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* ===== Footer Top ===== */
+.footer-top {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.footer-top h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.footer-top p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* ===== Email Input ===== */
+.input-footer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.input-footer input {
+  padding: 12px 14px;
+  width: 260px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  font-size: 15px;
+}
+
+.input-footer input:focus {
+  border-color: #ff4d4f;
+}
+
+.input-footer button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 6px;
+  background-color: #ff4d4f;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.input-footer button:hover {
+  background-color: #e63e3f;
+}
+
+/* ===== Footer Bottom ===== */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eee;
+  padding-top: 30px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* ===== Left ===== */
+.footer-left h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+/* ===== Social Icons ===== */
+.socials {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  font-size: 22px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.15);
+}
+
+/* ✅ Original Brand Colors */
+.social-icon:nth-child(1) { color: #1877f2; } /* Facebook */
+.social-icon:nth-child(2) { color: #e1306c; } /* Instagram */
+.social-icon:nth-child(3) { color: #ff0000; } /* YouTube */
+
+/* ===== Right ===== */
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-right li {
+  font-size: 15px;
+  margin-bottom: 8px;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-right li:hover {
+  color: #ff4d4f;
+}
+
+/* ===== Copyright ===== */
+.copy {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  margin-top: 30px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .footer {
+    padding: 50px 6% 25px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-top h2 {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,159 @@
+/* ================= PAGE TITLE ================= */
+.order-title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #ffffff;
+  animation: fadeSlide 0.6s ease forwards;
+  opacity: 0;
+}
+
+/* ================= CONTAINER ================= */
+.order-container {
+  width: 100%;
+  overflow-x: auto;
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  animation: fadeSlide 0.8s ease forwards;
+  opacity: 0;
+}
+
+/* Scrollbar */
+.order-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.order-container::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 8px;
+}
+
+/* ================= TABLE ================= */
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1150px;
+  color: #e2e8f0;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* ================= HEADER ================= */
+.order-table thead {
+  background: #1e293b;
+}
+
+.order-table thead th {
+  padding: 15px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 1px solid #334155;
+  white-space: nowrap;
+  color: #38bdf8;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+/* ================= BODY ================= */
+.order-table tbody td {
+  padding: 15px 14px;
+  font-size: 14px;
+  border-bottom: 1px solid #1e293b;
+  vertical-align: top;
+  white-space: nowrap;  /* Prevent breaking */
+}
+
+/* ================= ADDRESS COLUMN (Single Line + Ellipsis) ================= */
+.order-table tbody td:nth-child(4) {
+  max-width: 280px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ================= PRODUCT COLUMN ================= */
+.order-table tbody td:nth-child(5) {
+  white-space: normal;
+  max-width: 220px;
+}
+
+/* Product spacing */
+.order-table tbody td p {
+  margin: 0;
+  padding: 3px 0;
+}
+
+/* ================= ROW HOVER ================= */
+.order-table tbody tr {
+  transition: all 0.3s ease;
+}
+
+.order-table tbody tr:hover {
+  background-color: #1e293b;
+  transform: scale(1.01);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+}
+
+/* ================= STATUS DROPDOWN ================= */
+.order-status {
+  padding: 7px 12px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: #e2e8f0;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.order-status:hover {
+  border-color: #22c55e;
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.4);
+}
+
+.order-status:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+
+/* ================= PAYMENT COLUMN ================= */
+.order-table tbody td:nth-child(9) {
+  font-weight: 600;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .order-title {
+    font-size: 20px;
+  }
+
+  .order-table thead th,
+  .order-table tbody td {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
